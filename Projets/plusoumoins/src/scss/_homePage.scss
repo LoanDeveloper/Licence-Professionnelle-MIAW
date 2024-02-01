@@ -1,0 +1,17 @@
+.homePage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title{
+    padding-bottom: 4rem;
+  }
+  &__description{
+    padding: 1rem;
+  }
+
+  &__button{
+    margin-top: 4rem;
+  }
+}
+

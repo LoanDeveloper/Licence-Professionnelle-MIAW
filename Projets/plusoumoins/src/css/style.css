@@ -1,0 +1,292 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+a,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: #3D4852;
+}
+
+h1, h2, p {
+  color: white;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+button {
+  padding: 2rem 5rem;
+  background-color: #3D4852;
+  border-color: white;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 2rem;
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: 15rem;
+}
+
+button:hover {
+  background-color: #8795A1;
+}
+
+.logo {
+  width: 10%;
+  padding-bottom: 2.5%;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homePage__title {
+  padding-bottom: 4rem;
+}
+.homePage__description {
+  padding: 1rem;
+}
+.homePage__button {
+  margin-top: 4rem;
+}
+
+.gamePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gamePage p {
+  text-align: center;
+}
+.gamePage__versus {
+  font-size: 3rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3rem;
+  border-radius: 100%;
+  text-align: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.gamePage__firstWord {
+  width: 15vw;
+}
+.gamePage__searchWord {
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  margin: 7.5%;
+  margin-left: 12.5%;
+}
+
+.firstWord {
+  width: 30%;
+}
+.firstWord__name {
+  padding-bottom: 1rem;
+}
+.firstWord__description {
+  padding-bottom: 1rem;
+}
+
+.searchWord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin-top: -7.5vh;
+}
+.searchWord__description {
+  padding: 1rem;
+}
+.searchWord__button {
+  margin-bottom: 1rem;
+}
+
+.endGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.endGame__title {
+  padding-bottom: 2rem;
+}
+.endGame__description {
+  padding-bottom: 2rem;
+}/*# sourceMappingURL=style.css.map */

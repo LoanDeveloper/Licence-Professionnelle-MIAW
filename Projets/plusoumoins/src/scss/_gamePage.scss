@@ -1,0 +1,67 @@
+.gamePage{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  p{
+    text-align: center;
+  }
+
+  &__versus{
+    font-size: 3rem;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    width: fit-content;
+    padding: 3rem;
+    border-radius: 100%;
+    text-align: center;
+    height: fit-content;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  &__firstWord{
+    width: 15vw;
+  }
+
+  &__searchWord{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+    ;
+  }
+}
+
+.game{
+  display: flex;
+  flex-direction: row;
+  margin: 7.5%;
+  margin-left: 12.5%;
+
+}
+
+.firstWord{
+  width: 30%;
+  &__name{
+    padding-bottom: 1rem;
+  }
+  &__description{
+    padding-bottom: 1rem;
+  }
+}
+
+.searchWord{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin-top: -7.5vh;
+  &__description{
+    padding: 1rem;
+  }
+  &__button{
+    margin-bottom: 1rem;
+  }
+}

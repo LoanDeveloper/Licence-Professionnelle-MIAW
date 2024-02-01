@@ -1,0 +1,37 @@
+body {
+  background-color: #3D4852;
+}
+
+h1, h2, p {
+  color: white;
+  font-family: sans-serif;
+}
+
+h1{
+  font-size: 4rem;
+}
+p{
+  font-size: 2rem;
+}
+button{
+  padding: 2rem 5rem;
+  background-color: #3D4852;
+  border-color: white;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 2rem;
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: 15rem;
+}
+
+button:hover{
+  background-color: #8795A1;
+}
+
+.logo{
+  width: 10%;
+  padding-bottom: 2.5%;
+}
