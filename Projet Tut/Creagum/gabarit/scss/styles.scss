@@ -1,0 +1,127 @@
+  @import 'reset';
+  @import 'base';
+  @import 'mixins';
+  @import 'font';
+
+  .header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    position: relative;
+    &__img{
+      width: 40vw;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+
+    &__items {
+      position: absolute;
+      right: -100vw;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      transition: right 0.8s;
+      z-index: 1;
+      background: linear-gradient(#BF87C7 0%, #6F4DB1 40.1%, #6494D8 77.6%, #59DBFF 100%);
+      }
+
+    &__item{
+      padding: 2.2rem;
+      font-size: 2.4rem;
+      @include navbar;
+      position: relative;
+    }
+
+    &__item:last-child{
+      position: absolute;
+      bottom: 0;
+    }
+    &__link{
+      padding: 5px;
+    }
+
+    &__input:checked ~ &__items {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__input {
+      display: none;
+    }
+
+    &__input:checked ~ ul {
+      display: block;
+      right: 0;
+      top: 0;
+    }
+
+    &__input:checked ~ label::before {
+      content: '\2716';
+      color: white;
+      z-index: 5;
+
+    }
+
+    &__label {
+      padding: 2rem;
+      color: #fff; 
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      font-size: 4rem;
+    }
+    &__label::before {
+      content: '\2261';
+    }
+
+    &__logo{
+      width: 30vw;
+    }
+  }
+  
+  //FORMAT TABLETTE
+  @media screen and (width > 720px) and (width < 1025px){
+  }
+
+
+  // FORMAT PC
+  @media screen and (width > 1024px) {
+    .menu {
+      &__title {
+        display: none;
+      }
+
+      &__input {
+        display: none;
+      }
+
+      &__label {
+        display: none;
+      }
+
+      &__items {
+        position: inherit;
+        background: none;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+  }

@@ -1,0 +1,89 @@
+@media only screen and (max-width: 767px) {
+  /* Téléphone */
+
+  /***** NAVBAR *****/
+  .navbar > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /***** ALL *****/
+  h3 {
+    font-size: 40px;
+  }
+
+  /***** MAIN HEADER *****/
+  .main_header {
+    flex-direction: column;
+  }
+
+  /***** ACCUEIL *****/
+
+  .accueil > h1 {
+    font-size: 2rem;
+  }
+
+  .lotus_svg {
+    width: 80vw;
+  }
+
+  /**** Logo ****/
+  .logo {
+    width: 100vw;
+  }
+
+  .logo > img {
+    width: 5rem;
+    padding-left: 0.5rem;
+  }
+
+  .logo > p {
+    width: 16rem;
+  }
+
+  /***** SERVICES *****/
+
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100vw;
+  }
+
+  .service > img {
+    width: 100vw;
+  }
+
+  /***** Agence *****/
+  .agence_description {
+    flex-direction: column;
+  }
+
+  .agence_description > p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 200%; /* 36px */
+
+    border: 1px solid #d9d9d9;
+    background: rgba(3, 3, 3, 0.4);
+    width: 70vw;
+    height: fit-content;
+    padding: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .agence_description > img {
+    width: 75vw;
+  }
+
+  /**** Equipe *****/
+  .personnes {
+    flex-direction: column;
+  }
+  /**** Contact ****/
+}

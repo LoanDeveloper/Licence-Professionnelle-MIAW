@@ -1,0 +1,77 @@
+@mixin h1 {
+  color: var(--Solid-Heading, #42446E);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 7rem; 
+} 
+
+@mixin navbar {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@mixin gradient {
+  background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+@mixin h2{
+  color: var(--Solid-Heading, #42446E);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.6rem;  
+}
+
+@mixin h3{
+  color: var(--dark-content, #666);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.6rem; 
+}
+
+@mixin description{
+  color: var(--Colors-Heading, #1E0E62);
+  text-align: center;
+  font-family: "DM Sans";
+  font-weight: 700;
+}
+
+@mixin footer{
+  color: var(--Solid-Heading, #42446E);
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin realisations_description{
+  color: var(--dark-content, #666);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.6rem;
+}
+
+@mixin realisations_title{
+  color: #000;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin realisations_stack{
+  color: var(--Solid-Heading, #42446E);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/dc2df416ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/script.js"></script>
+    <title>Loan THOMY</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <p class="menu__title">Navigation</p>
+      <input class="menu__input" type="checkbox" id="icone-burger-close" />
+      <label class="menu__label" for="icone-burger-close"></label>
+      <ul class="menu__items">
+        <li class="menu__item"><a href="#header" class="menu__link">Accueil</a></li>
+        <li class="menu__item"><a href="#technologies" class="menu__link">Technologies</a></li>
+        <li class="menu__item"><a href="#realisations" class="menu__link">Réalisations</a></li>
+        <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
+        <li class="menu__item">
+          <section>
+            <a href="https://github.com/LoanThomy"><img src="./img/github.svg" alt="github"></a>
+            <a href="https://www.linkedin.com/in/loan-thomy/"><img src="./img/linkedin.svg" alt="linkedin"></a>
+          </section>
+      </li>
+      </ul>
+    </nav>
+
+    <header class="header" id="header">
+      <section class="header__titles">
+        <h1 class="header__title">Salut 👋,<span class="span"></span>Moi c’est <span class="span"></span><span class="header__gradient">Loan</span><span class="span"></span>Je crée des choses<span class="span"></span> pour le web</h1>
+      </section>
+      <img src="./img/Loan3.webp" alt="Loan" class="header__img">
+    </header>
+
+    <main class="main">
+      <section class="technologies" id="technologies">
+        <section class="technologies__titles"> 
+          <h2 class="technologies__title">Mes technologies</h2>
+          <h3 class="technologies__subtitle">Technologies avec lesquelles j'ai travaillé récemment</h3>
+        </section>
+        <ul class="technologies__items">
+          <li class="technologies__item"><img src="./img/html.svg" alt="html"></li>
+          <li class="technologies__item"><img src="./img/css.svg" alt="css"></li>
+          <li class="technologies__item"><img src="./img/js.svg" alt="javascript"></li>
+          <li class="technologies__item"><img src="./img/php.svg" alt="php"></li>
+          <li class="technologies__item"><img src="./img/react.svg" alt="react"></li>
+          <li class="technologies__item"><img src="./img/vuejs.svg" alt="vuejs"></li>
+          <li class="technologies__item"><img src="./img/symfony.svg" alt="symfony"></li>
+          <li class="technologies__item"><img src="./img/git.svg" alt="git"></li>
+          <li class="technologies__item"><img src="./img/sass.svg" alt="sass"></li>
+
+        </ul>
+      </section>  
+
+      <section class="realisations" id="realisations">
+        <section class="realisations__titles">
+          <h2 class="realisations__title">Réalisations</h2>
+          <h3 class="realisations__subtitle">Mes meilleurs projets</h3>
+        </section>
+
+        <ul class="realisations__items">
+          <li class="realisations__item">
+            <section class="realisations__section">
+              <img class="realisations__img" src="./img/lotus_realisations.webp" alt="lotus_realisations">
+              <h4 class="realisations__h4">Lotus Réalisation</h4>
+              <p class="realisations__description">Création d'une agence web fictive composée de 2 développeurs web fullstack ainsi que de 2 webdesigners intégrateurs. Ce site regroupe donc la description de l'agence, nos réalisations et le contact.</p>
+              <p class="realisations__stack"><span class="realisations__bold">Technologies :</span> HTML SCSS JS</p>
+            </section>
+          </li>
+          <li class="realisations__item">
+            <section class="realisations__section">
+              <img class="realisations__img" src="./img/creagum.webp" alt="lotus_realisations">
+              <h4 class="realisations__h4">Creagum</h4>
+              <p class="realisations__description">Création d'un site vitrine pour présenter l'entreprise Creagum (démarche environnementale, objectifs, cibles, évènements…). Une boutique en ligne a aussi été créée pour vendre des jeux de plages à l'aide de chewing-gum recyclés.</p>
+              <p class="realisations__stack">Technologies : Wordpress HTML SCSS JS</p>
+            </section>
+          </li>
+          <li class="realisations__item">
+            <section class="realisations__section">
+              <img class="realisations__img" src="./img/plus_ou_moins1.webp" alt="plus_ou_moins">
+              <h4 class="realisations__h4">Plus ou moins</h4>
+              <p class="realisations__description">Petit jeu réalisé en ReactJS dans lequel l'utilisateur à le choix entre 2 recherches Google et l'utilisateur doit choisir la recherche qui a le plus de recherches Google. L'utilisateur enchaine les choix jusqu'à avoir perdu.</p>
+              <p class="realisations__stack">Technologies : ReactJS HTML SCSS</p>
+            </section>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="contact__title">Contact</h2>
+        <section class="contact__descriptions">
+          <p class="contact__description">Si vous avez une question, contactez-moi :</p>
+          <a class="contact__email" href="mailto:loan.thomy@gmail.com">loan.thomy@gmail.com</a>
+        </section>
+        
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__num" href="tel:0638422954">0638422954</a>
+      <p class="footer__email" href="mailto:loan.thomy@gmail.com">loan.thomy@gmail.com</p>
+      <section class="footer__icons">
+        <a href="https://github.com/LoanThomy"><img src="./img/github.svg" alt="github"></a>
+        <a href="https://www.linkedin.com/in/loan-thomy/"><img src="./img/linkedin.svg" alt="linkedin"></a>
+      </section>
+    </footer>
+  </body>
+</html>

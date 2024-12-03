@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Space+Grotesk&display=swap" rel="stylesheet" />
+    <script src="script.js" defer></script>
+    <title>Lotus Réalisation</title>
+</head>
+
+
+<body>
+    <canvas id="canvas"></canvas>
+    <img id="petale1" class="petale" src="img/petale.png" alt="pétale">
+    <img id="petale2" class="petale" src="img/petale2.png" alt="pétale">
+    <img id="petale3" class="petale" src="img/petale3.png" alt="pétale">
+    <header>
+        <img src="" alt="" />
+        <h1><strong>LOTUS REALISATION</strong></h1>
+        <h2>ARRIVE BIENTOT</h2>
+        <p class="description"><strong>L'agence Web à la Rochelle ouvre bientôt ses portes en 2024 !</strong></p>
+    </header>
+    <main>
+        <div class="progressBar">
+            <div class="progressBar__container">
+                <div class="progressBar__in"></div>
+            </div>
+            <img src="img/lotus_bg_progress_bar.png" alt="" class="progressBar__lotus">
+            <div class="progressBar__percentContainer"></div>
+        </div>
+
+        <template class="progress__template">
+            <p class="progress__percent">{{percent}}</p>
+        </template>
+    </main>
+    <footer>
+        <p>@ 2023 Agence Lotus Réalisation</p>
+    </footer>
+</body>
+
+</html>

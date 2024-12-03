@@ -1,0 +1,2244 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Regles generales */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem; /* 14px par défaut */
+  /*font-family: 'Noto sans', sans-serif;*/
+}
+
+a,
+a:hover,
+a:visited {
+  /* ATTENTION LES LIENS SONT BLANC DANS CE MODELE*/
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+strong {
+  font-weight: 900;
+  font-family: "Nexa Bold";
+}
+
+/* FONT FAMILY */
+/* BOUTONS */
+@font-face {
+  font-family: Nexa Bold;
+  src: url(../font/Nexa\ Bold.otf);
+}
+@font-face {
+  font-family: Nexa Light;
+  src: url(../font/Nexa\ Light.otf);
+}
+/* FONT SIZE */
+.header {
+  position: relative;
+  overflow: hidden;
+}
+.header__video {
+  top: 0;
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: -6;
+  background-size: cover;
+}
+
+.objectifs__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 4vw, 3.6rem);
+  margin: 2.4rem 0 0rem;
+}
+.objectifs__underline {
+  margin: 0.8rem 0 1.6rem;
+}
+.objectifs__img {
+  height: 25vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 0 -5vh;
+  margin-bottom: 2.4rem;
+  background-repeat: no-repeat;
+}
+.objectifs__descriptionContainer {
+  margin: 2.4rem 2.4rem 4rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.objectifs__description {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.item__img {
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+}
+.item__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin: auto 2.4rem;
+  width: 100%;
+}
+.item__subtitle {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-transform: none;
+  margin: 0 2.4rem;
+}
+.item__underline {
+  height: 0.6rem;
+}
+.item__text {
+  margin: 0 2.4rem;
+  text-align: left;
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.item__text_title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0 2.4rem;
+  text-align: left;
+  text-transform: none;
+}
+.item__button {
+  border-radius: 80px;
+  background: linear-gradient(91deg, #59DBFF 8.38%, #6494D8 95.83%);
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 4rem;
+}
+.item__button--purple {
+  background: linear-gradient(91deg, #A65ACB 8.38%, #BF87C7 95.83%);
+}
+
+.sensi_events {
+  margin: 0 2.4rem;
+}
+.sensi_events__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 4vw, 3.6rem);
+  margin: 0.4rem 0 0rem;
+}
+.sensi_events__underline {
+  height: 0.6rem;
+  margin: 1.6rem 0;
+}
+.sensi_events__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.card_event {
+  text-align: left;
+  background-size: cover;
+  color: #FFFFFF;
+  position: relative;
+}
+.card_event__container {
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.card_event__container--blue {
+  background: linear-gradient(90deg, #6494D8 55%, rgba(100, 148, 216, 0) 90.11%);
+}
+.card_event__container--purple {
+  background: linear-gradient(90deg, #A65ACB 55%, rgba(100, 148, 216, 0) 90.11%);
+}
+.card_event__container--pink {
+  background: linear-gradient(90deg, #D64C87 55%, rgba(100, 148, 216, 0) 90.11%);
+}
+.card_event__container--green {
+  background: linear-gradient(90deg, #0C2D06 55%, rgba(100, 148, 216, 0) 90.11%);
+}
+.card_event__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-transform: none;
+  text-align: left;
+  line-height: 100%;
+  width: 40%;
+}
+.card_event__info {
+  color: #FBFBFB;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-size: 1.2rem;
+  line-height: 100%;
+}
+.card_event__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  z-index: -1;
+  content: " ";
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card_event__button {
+  background-color: #FFFFFF;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-transform: none;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  letter-spacing: 1px;
+  margin: 0.4rem 0;
+}
+.card_event__button--blue {
+  color: #6494D8;
+}
+.card_event__button--purple {
+  color: #A65ACB;
+}
+.card_event__button--pink {
+  color: #D64C87;
+}
+.card_event__button--green {
+  color: #0C2D06;
+}
+
+@media screen and (width > 1024px) {
+  .menu__title {
+    display: none;
+  }
+  .menu__input {
+    display: none;
+  }
+  .menu__label {
+    display: none;
+  }
+  .menu__items {
+    position: inherit;
+    background: none;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .objectifs__descriptionContainer {
+    display: grid;
+    grid-template-areas: "one three" "two four";
+    margin: 5.6rem 4.8rem;
+    gap: 3.2rem;
+  }
+  .objectifs__description:nth-child(1) {
+    grid-area: one;
+  }
+  .objectifs__description:nth-child(2) {
+    grid-area: two;
+  }
+  .objectifs__description:nth-child(3) {
+    grid-area: three;
+  }
+  .objectifs__description:nth-child(4) {
+    grid-area: four;
+  }
+  .items__container {
+    display: flex;
+    margin: 0 4.8rem 5.6rem;
+    gap: 2.4rem;
+  }
+  .item {
+    width: -moz-fit-content;
+    width: fit-content;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2509803922);
+    overflow: hidden;
+    width: calc(50vw - 3.6rem);
+  }
+  .sensi_events__underline {
+    margin: 3.2rem 0 5.6rem;
+  }
+  .sensi_events__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 4.8rem 6.4rem;
+    gap: 2.4rem;
+  }
+  .card_event {
+    width: calc(50vw - 9.4rem);
+    height: 14rem;
+  }
+  .card_event__container {
+    height: 14rem;
+  }
+}
+/* FONT SIZE */
+.header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.recyclage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recyclage__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 6vw;
+  margin-top: 2.4rem;
+}
+.recyclage__line {
+  width: 24rem;
+  margin: 1.6rem;
+}
+.recyclage__paragraphe {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.recyclage__sectionP {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 10px;
+}
+.recyclage__image {
+  max-width: 80%;
+}
+
+.collecte {
+  display: flex;
+  flex-direction: column;
+}
+.collecte__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 6vw;
+  margin-top: 2.4rem;
+}
+.collecte__line {
+  width: 24rem;
+  margin: 1.6rem auto;
+}
+.collecte__paragraphe {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 1.2rem 2.6rem;
+}
+.collecte__paragraphe--contact {
+  color: black;
+  text-decoration: underline;
+}
+
+#map {
+  height: 70vh;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Styliser le contenu de la popup */
+.leaflet-popup-content {
+  /* Vos styles ici */
+  color: #ffffff;
+  background: linear-gradient(114deg, rgba(89, 219, 255, 0.94) 6.88%, rgba(100, 148, 216, 0.93) 46.03%, rgba(166, 90, 203, 0.94) 90.18%);
+  padding: 10px;
+  font-size: 1.5rem;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+  font-family: "Nexa Light";
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.leaflet-popup-content span {
+  font-family: "Nexa Bold";
+  text-transform: uppercase;
+}
+
+/* Styliser le conteneur de la popup */
+.leaflet-popup {
+  /* Vos styles ici */
+  border: 1px solid #fff;
+  background: linear-gradient(114deg, rgba(89, 219, 255, 0.94) 6.88%, rgba(100, 148, 216, 0.93) 46.03%, rgba(166, 90, 203, 0.94) 90.18%);
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  box-shadow: 0 0 0;
+  background: linear-gradient(114deg, rgba(89, 219, 255, 0.94) 6.88%, rgba(100, 148, 216, 0.93) 46.03%, rgba(166, 90, 203, 0.94) 90.18%);
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+@media screen and (width > 720px) and (width < 1025px) {
+  .recyclage__paragraphe {
+    color: #000;
+    font-family: "Nexa Light";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+  }
+  .recyclage__sectionP {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .collecte__paragraphe {
+    color: #000;
+    font-family: "Nexa Light";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (width > 1024px) {
+  .recyclage__article {
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+  }
+  .recyclage__title {
+    color: #000;
+    text-align: center;
+    font-family: "Nexa Bold";
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: left;
+    align-self: start;
+    margin: 2.4rem 0 0 3.6rem;
+  }
+  .recyclage__line {
+    display: block;
+    align-self: start;
+    margin-left: 3.6rem;
+  }
+  .recyclage__map {
+    width: auto;
+    height: 70vh;
+  }
+  .recyclage__paragraphe {
+    color: #000;
+    font-family: "Nexa Light";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 1px;
+    font-size: 1.7rem;
+    width: 50rem;
+  }
+  .recyclage__sectionP {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .collecte__title {
+    color: #000;
+    text-align: center;
+    font-family: "Nexa Bold";
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: left;
+    margin: 2.4rem 0 0 3.6rem;
+  }
+  .collecte__line {
+    display: block;
+    align-self: start;
+    text-align: left;
+    width: 24rem;
+    margin-left: 3.6rem;
+  }
+  .collecte__map {
+    width: 75vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+  }
+  .collecte__paragraphe {
+    color: #000;
+    font-family: "Nexa Light";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    margin: 1.2rem 2.6rem;
+  }
+  .collecte__paragraphe--contact {
+    color: #141414;
+    text-decoration: underline;
+  }
+  #map {
+    height: 40vw;
+    width: 90%;
+  }
+}
+.header_single_event {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 40vh;
+  height: 40vh;
+}
+
+.recolte_event {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  padding: 3rem;
+}
+.recolte_event__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: #744dcf;
+  padding: 2rem 0rem;
+}
+.recolte_event__date {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+}
+.recolte_event__lieu {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+.recolte_event__button {
+  color: white;
+  background: #744dcf;
+  padding: 1rem 3rem;
+  color: #FBFBFB;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-transform: none;
+  margin: 1rem 0rem;
+}
+.recolte_event__description {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-transform: none;
+  text-align: start;
+  padding: 2rem 0rem;
+  line-height: 250%;
+}
+
+@media screen and (width > 1024px) {
+  .recolte_event {
+    padding: 2.5vw 20vw;
+  }
+  .recolte_event__description {
+    font-size: 1.5rem;
+  }
+  .recolte_event__button {
+    font-size: 1.5rem;
+  }
+}
+.content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15vh;
+}
+
+.woocommerce-products-header {
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.woocommerce-products-header__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.woocommerce-products-header__line:nth-child(2) {
+  display: none;
+}
+
+.woocommerce-loop-product__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product {
+  margin-top: 5vh;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vw;
+}
+
+.woocommerce-LoopProduct-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #744dcf;
+}
+
+.add_to_cart_button {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: #744dcf;
+  padding: 1rem 3rem;
+  margin: 1rem;
+}
+
+.orderby {
+  display: none;
+}
+
+.woocommerce-result-count {
+  display: none;
+}
+
+.widget-area {
+  display: none;
+}
+
+@media screen and (width > 768px) {
+  .content-area {
+    padding-bottom: 0vh;
+  }
+  .products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0rem 15vh;
+  }
+  .product {
+    margin: 10vw;
+  }
+  .woocommerce-products-header__title {
+    color: #000;
+    text-align: center;
+    font-family: "Nexa Bold";
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3.6rem;
+  }
+}
+.menu {
+  position: fixed;
+  width: 100vw;
+  right: 0;
+  top: 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  z-index: 15;
+  background: linear-gradient(90deg, rgba(191, 135, 199, 0.96) 0%, rgba(111, 77, 177, 0.96) 37.5%, rgba(100, 148, 216, 0.96) 71.5%, rgba(89, 219, 255, 0.96) 100%);
+  z-index: 5;
+}
+.menu__section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 1.6rem 0;
+}
+.menu__logo {
+  width: 12vw;
+  margin-left: 2.4rem;
+}
+.menu__items {
+  position: absolute;
+  right: -100vw;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: right 0.8s;
+  z-index: 1;
+  background: linear-gradient(#bf87c7 0%, #6f4db1 40.1%, #6494d8 77.6%, #59dbff 100%);
+}
+.menu-item:nth-of-type(1), .menu-item:nth-of-type(2), .menu-item:nth-of-type(3), .menu-item:nth-of-type(4), .menu-item:nth-of-type(5) {
+  padding: 1.2rem;
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  position: relative;
+}
+.menu-item > a, .menu-item > a, .menu-item > a {
+  color: white;
+}
+.menu__link {
+  padding: 5px;
+}
+.menu__links {
+  display: none;
+}
+.menu__input:checked ~ .menu__items {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu__input {
+  display: none;
+}
+.menu__input:checked ~ ul {
+  display: block;
+  right: 0;
+  top: 0;
+}
+.menu__input:checked ~ label::before {
+  content: "✖";
+  color: white;
+  z-index: 5;
+}
+.menu__label {
+  padding: 1rem;
+  color: #fff;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  order: 1;
+}
+.menu__label::before {
+  content: "≡";
+}
+.menu__cartaccount {
+  display: flex;
+  flex-direction: row;
+  padding-right: 1rem;
+}
+.menu__cartaccount > li:last-child {
+  order: -1;
+}
+
+@media screen and (width > 768px) {
+  .fa {
+    font-size: 2.5rem !important;
+  }
+  .menu__title {
+    display: none;
+  }
+  .menu__input {
+    display: none;
+  }
+  .menu__label {
+    display: none;
+  }
+  .menu__items {
+    position: inherit;
+    background: none;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .menu-item > a {
+    font-size: clamp(1rem, 1vw, 1.4rem);
+  }
+  .menu-item:nth-child(6) > a > i {
+    font-size: 3.6rem;
+    width: 4rem;
+  }
+  .menu__logo {
+    width: 8rem;
+    padding-left: 2rem;
+    position: absolute;
+  }
+  .menu__logo2 {
+    display: none;
+  }
+  .menu__links {
+    display: none;
+  }
+  .menu__linkimg {
+    order: 0;
+  }
+  .menu__section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .menu__cartaccount {
+    position: absolute;
+    right: 1rem;
+    padding-right: 2rem;
+  }
+}
+/* DISPLAY NONE */
+.entry-title {
+  display: none;
+}
+
+/* STYLE */
+.site-main {
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.u-column1 > h2,
+.u-column2 > h2 {
+  font-family: "Nexa Bold" !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+  font-weight: 400 !important;
+  font-size: 1.6rem !important;
+  color: #a65acb;
+  padding-bottom: 5vh !important;
+}
+
+.woocommerce-form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.woocommerce-Input {
+  border: 2px solid #b594cd;
+  padding: 5px 5px;
+  width: 80vw;
+}
+
+.woocommerce-Input::-moz-placeholder {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  color: #9f9f9f;
+}
+
+.woocommerce-Input::placeholder {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  color: #9f9f9f;
+}
+
+.woocommerce-form__input-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid #b594cd;
+  padding: 0;
+  margin: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.woocommerce-form__input-checkbox:checked {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+}
+
+.woocommerce-form__label-for-checkbox > span {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-transform: none;
+  color: #9f9f9f;
+}
+
+.woocommerce-form__label-for-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 1rem 0rem;
+}
+
+.woocommerce-form-login__submit,
+.woocommerce-form-register__submit {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-transform: none;
+  border: 2px solid #b594cd;
+  background: #b594cd;
+  padding: 1rem 1rem;
+}
+
+.woocommerce-form-login,
+.woocommerce-form-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.u-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.woocommerce-LostPassword > a {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  color: #9f9f9f !important;
+}
+
+.woocommerce-privacy-policy-text {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0rem 2rem;
+}
+
+@media screen and (width > 1024px) {
+  .site-main {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .woocommerce-Input {
+    width: 20vw;
+  }
+  .woocommerce-privacy-policy-text {
+    width: 20vw;
+  }
+  .u-columns {
+    flex-direction: row;
+    gap: 20vw;
+  }
+}
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.error__logo {
+  height: 13rem;
+  width: auto;
+}
+.error__logotitre {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 3.2rem;
+  font-family: "Nexa Bold";
+  color: #bf87c7;
+}
+.error__titre {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.error__nombre {
+  font-size: 6.4rem;
+  color: #6f4db1;
+}
+.error__page {
+  font-size: 1.6rem;
+  font-family: "Nexa Bold";
+}
+
+@media screen and (width > 1024px) {
+  .error {
+    gap: 2rem;
+  }
+  .error__logotitre {
+    flex-direction: row-reverse;
+    font-size: 6.4rem;
+  }
+  .error__nombre {
+    font-size: 6.4rem;
+    align-self: flex-end;
+  }
+  .error__page {
+    font-size: 2.4rem;
+    font-family: "Nexa Bold";
+  }
+}
+.woocommerce-MyAccount-navigation-link--downloads {
+  display: none;
+}
+
+.woocommerce-MyAccount-navigation {
+  display: flex;
+  font-family: "Nexa Bold";
+  font-size: 2.5rem;
+  flex-direction: column;
+}
+
+.woocommerce-MyAccount-navigation a {
+  color: black;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  display: flex;
+  justify-content: center;
+  font-family: "Nexa Bold";
+  font-size: 2.5rem;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+.woocommerce-MyAccount-content {
+  color: black;
+  font-family: "Nexa Light";
+  font-size: 1.8rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.woocommerce-MyAccount-content h3 {
+  font-size: 2.5rem;
+}
+
+.woocommerce-EditAccountForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.required {
+  color: red;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem !important;
+}
+
+fieldset legend {
+  font-family: "Nexa Bold";
+  padding: 1rem !important;
+}
+
+.woocommerce-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.woocommerce-Button {
+  color: white;
+  background-color: #b594cd;
+  border: 0;
+  padding: 1rem;
+  font-family: "Nexa Bold";
+  font-size: 1.5rem;
+}
+
+.woocommerce-address-fields__field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+input,
+textarea {
+  font-family: "Nexa Light";
+}
+
+.woocommerce-input-wrapper input {
+  border: 2px solid #b594cd;
+  width: 200px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 2rem;
+  color: white;
+  background-color: #b594cd;
+  border: 0;
+  padding: 1rem;
+  font-family: "Nexa Bold";
+  font-size: 1.5rem;
+}
+
+label {
+  font-family: "Nexa Light";
+}
+
+@media screen and (width > 425px) and (width < 769px) {
+  .woocommerce-MyAccount-navigation ul {
+    padding: 10rem;
+  }
+}
+.form__title {
+  font-family: "Nexa Bold";
+  margin-top: 12rem;
+  font-size: 2.5rem;
+}
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.wpcf7-form input,
+textarea {
+  border: 2px solid #b594cd;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.wpcf7-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  color: white;
+  background-color: #b594cd;
+  border: 0;
+  width: 200px;
+  padding: 1rem;
+  font-family: "Nexa Bold";
+  font-size: 1.5rem;
+}
+
+.wc-block-cart__empty-cart__title.with-empty-cart-icon:before {
+  background-color: #A65ACB !important;
+}
+
+.wc-block-cart__empty-cart__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 6vw;
+  font-size: 1.6rem !important;
+  margin: 3.2rem 3.2rem 0;
+  color: #A65ACB;
+}
+
+.wp-block-separator.is-style-dots:before {
+  content: "Remplissez le pour sauver la planète !";
+  font-family: "Nexa Light";
+  margin: 0 3.2rem !important;
+  font-size: 1.4rem !important;
+  letter-spacing: 0px;
+  color: #141414;
+  padding: 0;
+}
+
+.wp-block-woocommerce-empty-cart-block .has-text-align-center:last-child {
+  display: none;
+}
+
+@media screen and (width > 768px) {
+  .wp-block-separator.is-style-dots:before {
+    font-size: 2rem !important;
+  }
+  .wc-block-cart__empty-cart__title {
+    font-size: 2.5rem !important;
+  }
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+}
+.header__img {
+  width: 40vw;
+}
+.header__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 75vh;
+}
+
+.a_propos {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.a_propos__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 4vw, 6rem);
+}
+.a_propos__titles {
+  order: -1;
+}
+.a_propos__img {
+  width: 75vw;
+}
+.a_propos__imgdesktop {
+  display: none;
+}
+.a_propos__line {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.a_propos__description {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 2rem;
+}
+.a_propos__contact {
+  border-radius: 80px;
+  background: linear-gradient(91deg, #59DBFF 8.38%, #6494D8 95.83%);
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+}
+.a_propos__linedesktop {
+  display: none;
+}
+
+.slider__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+}
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider__button {
+  color: #FBFBFB;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 2.3rem;
+  border-radius: 24px;
+  font-size: 1.2rem;
+  border: 1px solid #fff;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  color: white;
+}
+.slider__arrow {
+  display: none;
+}
+
+.events {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.events__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 6.4rem 0rem;
+}
+
+.recoltes {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+.recoltes__items {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 3.2rem;
+  gap: 6.4rem;
+  position: relative;
+  left: 0vw;
+  transition: 0.5s;
+}
+.recoltes__arrow {
+  height: 3rem;
+  position: absolute;
+  top: calc(50% - 2rem);
+  z-index: 3;
+}
+.recoltes__arrow--left {
+  left: 0.4rem;
+}
+.recoltes__arrow--right {
+  right: 0.4rem;
+  transform: scaleX(-1);
+}
+
+.recolte {
+  width: calc(100vw - 6.4rem);
+  min-height: 70vh;
+}
+.recolte--pink {
+  background: linear-gradient(180deg, #7a068a 40.99%, rgba(122, 6, 138, 0) 100%);
+}
+.recolte--purple {
+  background: linear-gradient(180deg, #6f4db1 75.52%, rgba(111, 77, 177, 0) 100%);
+}
+.recolte--blue {
+  background: linear-gradient(180deg, #6494d8 67.19%, rgba(100, 148, 216, 0) 100%);
+}
+.recolte--green {
+  background: linear-gradient(180deg, #0c2d06 57.85%, rgba(12, 45, 6, 0) 100%);
+}
+.recolte__img {
+  width: 100%;
+}
+.recolte__button {
+  border-radius: 110px;
+  background: linear-gradient(91deg, #744DCF 19.09%, #6494D8 98.64%);
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1rem 4rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 4rem auto;
+}
+.recolte__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  padding: 2rem 0rem;
+}
+.recolte__date, .recolte__lieu {
+  color: #FBFBFB;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.recolte__description {
+  color: #FBFBFB;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin: 2rem;
+  padding: 2rem 0rem;
+}
+.recolte__items {
+  display: flex;
+  flex-direction: row;
+}
+
+.confiance {
+  margin: 4rem 0;
+}
+.confiance__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 2.4rem;
+}
+.confiance__container {
+  overflow: hidden;
+  padding: 6rem 0;
+  white-space: nowrap;
+  position: relative;
+}
+.confiance__container::before, .confiance__container::after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 20vw;
+  content: "";
+  z-index: 2;
+}
+.confiance__container::before {
+  left: 0;
+}
+.confiance__container::after {
+  right: 0;
+}
+.confiance__slider {
+  position: relative;
+  left: 0rem;
+}
+.confiance__img {
+  height: 10vh;
+  margin: 0 2rem;
+}
+
+.livre__line {
+  height: 6rem;
+  margin: 2.4rem;
+}
+.livre__title {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.livre__guillements {
+  position: absolute;
+  bottom: 2rem;
+  right: 12vw;
+  width: 5rem;
+  z-index: 5;
+}
+.livre__slider {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+.livre__container {
+  display: flex;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  gap: 4vw;
+  position: relative;
+  padding: 3rem 0;
+}
+.livre__item {
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.278);
+  background-color: #FFFFFF;
+  margin: auto;
+  width: 50vw;
+  border-radius: 5px;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+.livre__item--active {
+  padding: 1.2rem 1.2rem 2.4rem;
+  width: 80vw;
+}
+.livre__item--active h4 {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.livre__item--active p {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+.livre__name {
+  color: #000;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+  transition: 0.5s;
+}
+.livre__description {
+  color: #000;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 0.4rem;
+  transition: 0.5s;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer {
+  background: linear-gradient(90deg, #bf87c7 0%, #6f4db1 40.1%, #6494d8 77.6%, #59dbff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.footer__logo {
+  width: 5rem;
+}
+.footer__logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+.footer__title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+.footer__subtitle {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+}
+.footer__num, .footer__mail {
+  color: #FBFBFB;
+  font-family: "Nexa Light";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+.footer__num:hover, .footer__num:visited, .footer__mail:hover, .footer__mail:visited {
+  color: white;
+}
+.footer__link {
+  padding: 4px;
+}
+.footer__link img {
+  height: 2.2rem;
+  width: 2.2rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__links {
+  padding: 1rem;
+}
+.footer__tels, .footer__mails {
+  display: flex;
+  gap: 1rem;
+}
+.footer__tel {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer__marine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sensibilisation {
+  background-size: cover;
+  height: 30vh;
+  width: 100vw;
+}
+
+.collecte-recyclage {
+  background-size: cover;
+  height: 30vh;
+  width: 100vw;
+}
+
+.boutique {
+  background-size: cover;
+  height: 30vh;
+  width: 100vw;
+}
+
+@media screen and (width > 768px) {
+  .header__title {
+    font-size: 4vw;
+  }
+  .header__img {
+    width: 15vw;
+  }
+  .a_propos {
+    margin: 0rem;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-areas: "img titles" "img descriptions";
+  }
+  .a_propos__imgs {
+    grid-area: img;
+  }
+  .a_propos__titles {
+    grid-area: titles;
+    width: 50vw;
+  }
+  .a_propos__descriptions {
+    grid-area: descriptions;
+    width: 50vw;
+  }
+  .a_propos__description {
+    text-align: center;
+    font-size: 1.9rem;
+  }
+  .a_propos__description:nth-child(2) {
+    padding-bottom: 10vh;
+  }
+  .a_propos__contact {
+    margin: auto;
+  }
+  .a_propos__line {
+    margin: auto;
+  }
+  .a_propos__linemobile {
+    display: none;
+  }
+  .a_propos__linedesktop {
+    display: block;
+  }
+  .a_propos__imgmobile {
+    display: none;
+  }
+  .a_propos__imgdesktop {
+    display: block;
+    width: 35vw;
+    max-width: none;
+  }
+  .a_propos__contact {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .slider {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    width: 100vw;
+    overflow: hidden;
+    margin-bottom: 4.8rem;
+  }
+  .slider__arrow {
+    display: block;
+    position: absolute;
+    height: 6rem;
+    top: calc(50% - 3rem);
+    z-index: 4;
+  }
+  .slider__arrow--left {
+    left: 8.8rem;
+  }
+  .slider__arrow--right {
+    right: 8.8rem;
+    transform: scaleX(-1);
+  }
+  .slider__title {
+    font-size: 4vw;
+  }
+  .slider__button {
+    font-size: clamp(1.5rem, 1vw, 5rem);
+    transition: 0.5s;
+  }
+  .slider__button:hover {
+    letter-spacing: 2px;
+    color: #141414;
+    background-color: #FFFFFF;
+  }
+  .slider__container {
+    position: relative;
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: 0.5s;
+    margin: 0 6.4rem;
+    gap: 12.8rem;
+    left: 0vw;
+  }
+  .slider__item {
+    height: 80vh;
+    width: calc(100vw - 12.8rem);
+    margin: auto;
+  }
+  .events {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .events__title {
+    font-size: 3.6rem;
+  }
+  .recolte {
+    width: 20vw;
+  }
+  .recolte__button {
+    transition: 0.5s;
+  }
+  .recolte__button:hover {
+    letter-spacing: 2px;
+    color: #A65ACB;
+    background: #FFFFFF;
+  }
+  .recoltes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .recoltes__items {
+    width: 80vw;
+    display: flex;
+    left: 0vw !important;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 5vh;
+  }
+  .recoltes__arrow {
+    display: none;
+  }
+  .confiance__title {
+    color: #000;
+    text-align: center;
+    font-family: "Nexa Bold";
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3.6rem;
+  }
+  .livre__container {
+    min-height: 40rem;
+  }
+  .livre__item {
+    width: 25vw;
+    padding: 3.2rem;
+    cursor: pointer;
+  }
+  .livre__item--active {
+    padding: 5.6rem;
+    width: 35vw;
+  }
+  .livre__item--active h4 {
+    color: #000;
+    text-align: center;
+    font-family: "Nexa Bold";
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+  .livre__item--active p {
+    color: #000;
+    font-family: "Nexa Light";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+  }
+  .livre__name {
+    color: #000;
+    text-align: center;
+    font-family: "Nexa Bold";
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 4rem;
+  }
+  .livre__description {
+    color: #000;
+    font-family: "Nexa Light";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+  .livre__guillemets {
+    right: 40vw;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.8rem;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer > div > section > a {
+    color: #FBFBFB;
+    font-family: "Nexa Light";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 1px;
+    font-size: 2.4rem;
+    padding: 5px;
+  }
+  .footer__num, .footer__mail {
+    font-size: 1.6rem !important;
+  }
+  .footer__subtitle {
+    padding-bottom: 2rem;
+    color: #FFF;
+    text-align: center;
+    font-family: "Nexa Bold";
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    line-height: 150%;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-size: 1.9rem !important;
+    text-transform: none;
+  }
+  .footer__marine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__connect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__link > img {
+    width: 2.2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

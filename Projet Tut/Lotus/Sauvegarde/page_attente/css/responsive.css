@@ -1,0 +1,55 @@
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .progressBar {
+        width: 70vw;
+        height: 8vw;
+        position: relative;
+        margin: auto;
+    }
+    .progressBar__container {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border: solid 2px #385356;
+        overflow: hidden;
+        /* position: relative; */
+    }
+    .progressBar__in {
+        height: 100%;
+        background-image: url('../img/BG_progress_bar.png');
+        background-size: cover;
+        /* width: 20vw; */
+    }
+    .progressBar__lotus {
+        position: absolute;
+        /* left: 20vw; */
+        top: -3vw;
+        left: -5vw;
+        width: 16vw;
+    }
+    .progressBar__percentContainer {
+        position: absolute;
+        width: 16vw;
+        top: 12vw;
+        text-align: center;
+        color: white;
+        font-family: Horizon;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}

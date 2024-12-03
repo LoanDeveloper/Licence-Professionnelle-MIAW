@@ -1,0 +1,147 @@
+@font-face {
+    font-family: Horizon;
+    src: url('../font/NEW\ UPDATED\ VERSION/horizon.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Horizon Outline;
+    src: url('../font/NEW\ UPDATED\ VERSION/horizon_outlined.otf') format('opentype');
+}
+
+body {
+    background-image: url('../img/BG_1.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* min-height: 100vh; */
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    position: relative;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url('./img/BG.png'); */
+    background-size: cover;
+    /* background-color: purple; */
+    /* overflow: hidden; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img {
+    /* background-color: salmon; */
+}
+
+#petale1 {
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    width: 15vw;
+}
+
+#petale2 {
+    position: absolute;
+    top: 5vh;
+    left: 75vw;
+    width: 15vw;
+}
+
+#petale3 {
+    position: absolute;
+    top: 85vh;
+    left: 75vw;
+    width: 20vw;
+}
+
+h1 {
+    font-family: Horizon;
+    color: white;
+    font-size: 7rem;
+}
+
+h2 {
+    font-family: Horizon Outline;
+    color: white;
+    font-size: 5rem;
+    padding-top: 2vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../img/lotus.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 15vh;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+footer {
+    color: white;
+}
+
+p.description {
+    color: white;
+    font-family: Horizon;
+    padding-top: 2vh;
+}
+
+
+/* PROGRESS */
+
+.progressBar {
+    width: 40vw;
+    height: 3.5vw;
+    position: relative;
+    margin: auto;
+}
+
+.progressBar__container {
+    height: 100%;
+    border-radius: 20px;
+    border: solid 2px #385356;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+.progressBar__in {
+    height: 100%;
+    width: 0%;
+    background-image: url('../img/BG_progress_bar.png');
+    background-size: cover;
+    /* width: 20vw; */
+}
+
+.progressBar__lotus {
+    position: absolute;
+    left: -3vw;
+    top: -1.3vw;
+    width: 7vw;
+}
+
+.progressBar__percentContainer {
+    position: absolute;
+    width: 7vw;
+    top: 5vw;
+    left: 0vw;
+    text-align: center;
+    color: white;
+    font-family: Horizon;
+}
+
+footer {
+    margin-bottom: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+}

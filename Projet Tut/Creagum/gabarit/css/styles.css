@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Regles generales */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem; /* 14px par défaut */
+  /*font-family: 'Noto sans', sans-serif;*/
+}
+
+a, a:hover, a:visited { /* ATTENTION LES LIENS SONT BLANC DANS CE MODELE*/
+  color: #FFF;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+@font-face {
+  font-family: Nexa Bold;
+  src: url(../font/Nexa\ Bold.otf);
+}
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  position: relative;
+}
+.header__img {
+  width: 40vw;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+.menu__items {
+  position: absolute;
+  right: -100vw;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: right 0.8s;
+  z-index: 1;
+  background: linear-gradient(#BF87C7 0%, #6F4DB1 40.1%, #6494D8 77.6%, #59DBFF 100%);
+}
+.menu__item {
+  padding: 2.2rem;
+  font-size: 2.4rem;
+  color: #FFF;
+  text-align: center;
+  font-family: "Nexa Bold";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+.menu__item:last-child {
+  position: absolute;
+  bottom: 0;
+}
+.menu__link {
+  padding: 5px;
+}
+.menu__input:checked ~ .menu__items {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu__input {
+  display: none;
+}
+.menu__input:checked ~ ul {
+  display: block;
+  right: 0;
+  top: 0;
+}
+.menu__input:checked ~ label::before {
+  content: "✖";
+  color: white;
+  z-index: 5;
+}
+.menu__label {
+  padding: 2rem;
+  color: #fff;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+}
+.menu__label::before {
+  content: "≡";
+}
+.menu__logo {
+  width: 30vw;
+}
+
+@media screen and (width > 1024px) {
+  .menu__title {
+    display: none;
+  }
+  .menu__input {
+    display: none;
+  }
+  .menu__label {
+    display: none;
+  }
+  .menu__items {
+    position: inherit;
+    background: none;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=styles.css.map */

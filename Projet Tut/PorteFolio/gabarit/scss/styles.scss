@@ -1,0 +1,320 @@
+  @import 'reset';
+  @import 'base';
+  @import 'mixins';
+
+  .menu {
+    height: 10vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+
+    &__items {
+      position: absolute;
+      top: -250vw;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      transition: top 1s;
+      z-index: 1;
+      background-color: black;
+    }
+
+    &__item{
+      padding: 2rem;
+      font-size: 3rem;
+      @include navbar;
+    }
+
+    &__input:checked ~ &__items {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__input {
+      display: none;
+    }
+
+    &__input:checked ~ ul {
+      display: block;
+      top: 0;
+    }
+
+    &__input:checked ~ label::before {
+      content: '\2716';
+      color: white;
+      z-index: 5;
+
+    }
+
+    &__label {
+      padding: 2rem;
+      color: #666; 
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      font-size: 4rem;
+    }
+    &__label::before {
+      content: '\2261';
+    }
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    height: 90vh;
+    &__title{
+      @include h1;
+      font-size: 10vw;
+      width: 80vw;
+    }
+    &__gradient{
+      @include gradient;
+    }
+    &__img {
+      width: 50%;
+      border: double 6px transparent;
+      border-radius: 100%;
+      background-color: #666;
+      background: cover no-repeat;
+      background-image: linear-gradient(white, white), radial-gradient(circle at top left, #E70FAA,#00C0FD);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+  }
+  .span{ 
+    display: block;
+  }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+    gap: 5vh;
+    margin: 2rem; 
+    flex-wrap: nowrap;
+  }
+
+  .technologies{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    &__titles{
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+    }
+    &__title{
+      @include h2;
+      font-size: 3rem;
+      padding-top: 2rem;
+    }
+    &__subtitle{
+      @include h3;
+      font-size: 2rem;
+    }
+    &__items{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    &__item {
+      width: 40%;
+    }
+  }
+
+  .realisations{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    &__titles{
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+    }
+    &__title{
+      @include h2;
+      font-size: 3rem;
+      padding-top: 2rem;
+    }
+    &__subtitle{
+      @include h3;
+      font-size: 2rem;
+    }
+    &__items{
+      display: flex;
+      flex-direction: column;
+      gap: 5vh;
+    }
+    &__item{
+      border-radius: 2rem;
+      box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.20); 
+    }
+    &__img{
+      border-radius: 20px 20px 0px 0px; 
+    }
+    &__description{
+      @include realisations_description;
+      padding: 2rem;
+    }
+    &__h4{
+      @include realisations_title;
+      font-size: 2.5rem;
+      padding-top: 1rem;
+    }
+    &__stack{
+      @include realisations_stack;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    &__bold{
+      font-weight: 400; 
+    }
+  }
+
+  .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    &__title{
+      @include h2;
+      font-size: 3rem;
+      padding-top: 2rem;
+    }
+    &__descriptions{
+      padding-bottom: 10vh;
+    }
+    &__description{
+      @include description;
+      font-size: 1.5rem;
+    }
+    &__email{
+      @include gradient;
+      font-size: 2rem;
+      font-family: "DM Sans"; 
+      height: 5rem;
+    }
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+    @include footer;
+    &__num, &__num:visited, &__num:hover{
+      color: #42446E;
+    }
+  }
+
+  
+  //FORMAT TABLETTE
+  @media screen and (width > 720px) and (width < 1025px){
+    .header{
+      &__img{
+        width: 50%;
+      }
+    }
+    .realisations{
+      align-items: center;
+      &__item{
+        width: 80vw;
+      }
+    }
+  }
+
+
+  // FORMAT PC
+  @media screen and (width > 1024px) {
+    .menu {
+      &__title {
+        display: none;
+      }
+
+      &__input {
+        display: none;
+      }
+
+      &__label {
+        display: none;
+      }
+
+      &__items {
+        position: inherit;
+        background: none;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__link, &__link:hover, &__link:visited{ 
+        color:#666;
+        font-size: 2rem;
+      }
+    }
+    .header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      &__title{
+        font-size: 3vw;
+      }
+      &__img{
+        width: 30%;
+      }
+      &__titles{
+        width: 40vw;
+      }
+    }
+    .technologies{
+      &__title{
+        font-size: 4rem;
+      }
+      &__items{
+        padding: 5vw;
+      }
+      &__item{
+        width: 25vw;
+      }
+    }
+    .realisations{
+      align-items: center;
+      &__title{
+        font-size: 4rem;
+      }
+      &__items{
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      &__item{
+        width: 25vw;
+      }
+    }
+    .contact{
+      &__title{
+        font-size: 4rem;
+      }
+      &__description{
+        font-size: 4rem;
+      }
+      &__email{
+        font-size: 4rem;
+      }
+      &__descriptions{
+        margin: 10rem;
+      }
+    }
+
+  }
