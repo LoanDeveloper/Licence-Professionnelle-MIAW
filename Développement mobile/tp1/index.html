@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <meta http-equiv="Content-Security-Policy"
+        content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"> -->
+    <link rel="stylesheet" href="css/mini.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.7/pwacompat.min.js"></script> -->
+    <script src="main.js" defer></script>
+    <title>App TD dev. Mobile</title>
+
+</head>
+
+<body>
+
+    <header>
+        App TD dev. Mobile
+        <a href="https://www.univ-larochelle.fr/"><img src="./img/logo_univlr.png" alt="logo_univlr"></a>
+    </header>
+
+    <main>
+        <h2>Combien de jours entre deux dates...</h2>
+
+        <form id="saisie">
+            Date début <input type="date" name="startdate" id="sdate"><br>
+            Date cible <input type="date" name="enddate" id="edate"><br>
+        </form>
+
+        <button id="b_calcul" onclick="jours()">Calcul (client side)</button>
+        <button onclick="addRecordToDB()">Save as event</button>
+        <p>
+            <br><br>
+        <div id="result">
+            <h2>Nombre de jours</h2>
+            <div id="result-value">-</div>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        La Rochelle Université - 2023
+    </footer>
+
+
+</body>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function (err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    }
+</script>
+</html>
