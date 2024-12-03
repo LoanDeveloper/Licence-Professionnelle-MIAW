@@ -1,0 +1,120 @@
+@import "reset";
+@import "base";
+
+@font-face {
+  font-family: "VictorMono";
+  src: url("../fonts/VictorMono-Thin.woff2") format("woff2"),
+    url("../fonts/VictorMono-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url("../fonts/Syne-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Syne-ExtraBold.woff") format("woff");
+}
+
+.body__athletes {
+  background-color: #333;
+  color: white;
+  &--white {
+    background-color: #e2e2e2;
+    color: black;
+  }
+  .header {
+    font-family: "VictorMono";
+    margin: 2vh 5vw 0;
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+      width: 15vw;
+    }
+    &__coin {
+      display: flex;
+      align-items: center;
+      .coin__logo {
+        width: 7vw;
+        margin-left: 4vw;
+      }
+      .coin__amount {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .main__athletes {
+    font-family: "VictorMono";
+    margin-inline: 10vw;
+    .logo {
+      display: block;
+      margin: 5vh auto 10vh;
+    }
+    .text {
+      text-align: center;
+      margin-bottom: 2vh;
+    }
+    .selector {
+      color: #333;
+      font-family: "Syne";
+      width: 100%;
+      border-radius: 10px;
+      min-height: 5vh;
+      font-size: 1.8rem;
+      padding-left: 5vw;
+    }
+  }
+
+  .main__athletes--white {
+    margin-inline: 5vw;
+    .selector {
+      color: black;
+      margin-top: 4vh;
+    }
+
+    .athletes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10vw;
+      padding: 5vh 0 15vh;
+      .athlete {
+        flex: calc(50% - 5vw);
+        background-color: #c1de16;
+        padding: 1vh 2vw;
+        border-radius: 24px;
+        &__img {
+          border-radius: 24px;
+          width: 100%;
+        }
+
+        &__infos {
+          .athlete__name {
+            font-size: 1.6rem;
+            padding: 1vh 0 2vh;
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    bottom: 2vh;
+    width: 90vw;
+    margin-left: 5vw;
+    background-color: #fff;
+    border-radius: 45px;
+
+    &__items {
+      display: flex;
+      justify-content: space-around;
+      min-height: 8vh;
+      align-items: center;
+    }
+
+    &__img {
+      width: 8vw;
+    }
+  }
+}
