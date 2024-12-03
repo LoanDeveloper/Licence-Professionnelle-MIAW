@@ -1,0 +1,12 @@
+USER STORIES :
+
+- En tant que ..., je souhaite acheter des jouets de plage
+
+- En tant que ..., je souhaite m'informer aux événements de collecte de chewing-gums
+- En tant que ..., je souhaite m'inscrire aux événements de collecte de chewing-gums 
+
+- En tant que ..., je souhaite en apprendre plus sur l’écologie et le recyclage de chewing-gums
+
+- En tant que ..., je souhaite savoir ou trouver des points de recyclage de chewing-gums
+
+- En tant que ..., je souhaite pouvoir lire des avis sur les jeux de plages 
