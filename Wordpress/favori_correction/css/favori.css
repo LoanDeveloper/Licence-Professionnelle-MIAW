@@ -1,0 +1,11 @@
+.favori-on {
+    color: red;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.favori-off {
+    color: gray;
+    font-size: inherit;
+    cursor: pointer;
+}
