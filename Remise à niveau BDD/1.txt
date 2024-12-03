@@ -1,0 +1,14 @@
+select reference, designation from produits where prixht >15;
+
+select nointerv,dateinterv,temps from interventions where nominterv = 'Crespin';
+
+select designation from produits where qtestock - qtesecurite <= 10 and qtestock - qtesecurite >0;
+
+select reference, designation from produits where reference LIKE '%1';
+
+select nointerv,dateinterv from interventions join
+factures ON interventions.nofacture = factures.nofacture WHERE datefacture = '2019-07-15';
+
+select f.nofacture from factures f join interventions i on f.nofacture = i.nofacture JOIN clients c ON c.noclient = i.noclient WHERE c.nom = 'Rivoire';
+
+select distinct nom from clients cl join interventions i on cl.noclient = i.noclient where i.dateinterv < '2019-07-15' ORDER BY cl.nom ASC;

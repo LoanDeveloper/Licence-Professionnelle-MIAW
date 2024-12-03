@@ -1,0 +1,19 @@
+SELECT AVG(p.prixht) AS "moyenne" FROM produits p;
+
+SELECT COUNT(DISTINCT i.nomresponsable) AS "nbre_resp" FROM interventions i;
+
+SELECT COUNT(c.noclient) AS "nbre_clients_ss_interv" FROM clients c
+	WHERE NOT EXISTS (SELECT 1 FROM interventions i
+					 WHERE i.noclient = c.noclient);
+
+SELECT i.nofacture, COUNT(i.nointerv) AS "nbre_interv"
+	FROM interventions i group by i.nofacture
+	ORDER BY nofacture;
+
+SELECT c.noclient, c.nom, count(i.nointerv) AS "nbre_interv" FROM clients c
+	LEFT JOIN interventions i ON i.noclient = c.noclient
+	GROUP BY c.noclient, c.nom ORDER BY nbre_interv DESC;
+	
+select reference, count(reference) as nbredefois 
+	from remplacements group by reference 
+	having count(nointerv)>=2;

@@ -1,0 +1,12 @@
+select i.noclient from interventions i join clients on clients.noclient = i.noclient where i.nominterv = 'Bonnaz';
+
+select distinct i.nomresponsable from interventions i join factures f on f.nofacture = i.nofacture where f.etat = 'C';
+
+select r.nointerv from remplacements r 
+	join produits p on p.reference = r.reference 
+	where p.prixht > 50 order by r.nointerv;
+	
+select p.designation from produits p 
+	join remplacements r on r.reference = p.reference
+	join interventions i on i.nointerv = r.nointerv
+	where i.dateinterv = '2019-07-03'

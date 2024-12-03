@@ -1,0 +1,28 @@
+select designation from produits p
+	WHERE NOT EXISTS (SELECT 1
+					  FROM remplacements r
+					  WHERE r.reference = p.reference);
+					  
+select designation from produits p 
+	WHERE p.reference NOT IN (SELECT r.reference
+				 FROM REMPLACEMENTS r);
+				 
+select c.noclient, c.nom from clients c
+	WHERE c.noclient NOT IN (SELECT i.noclient
+							FROM interventions i)
+							ORDER BY c.noclient ASC;
+							
+select c.noclient, c.nom from clients c
+	WHERE NOT EXISTS (SELECT i.noclient
+					 FROM interventions i
+					 WHERE i.noclient = c.noclient)
+					 ORDER BY c.noclient ASC;
+					 
+select p.reference, p.designation from produits p
+	WHERE NOT EXISTS (SELECT 1 
+					 FROM interventions i
+					 WHERE NOT EXISTS (SELECT 1
+									   FROM remplacements r
+									   WHERE i.nointerv = r.nointerv
+									   AND r.reference = p.reference
+					 ))
