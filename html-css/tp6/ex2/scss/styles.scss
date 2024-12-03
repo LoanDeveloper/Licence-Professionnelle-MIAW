@@ -1,0 +1,187 @@
+@import 'reset';
+@import 'base';
+@import 'mixins';
+
+.menu {
+  height: 10vh;
+  background-color: #373c3f;
+  color: white;
+  padding-left: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+
+  &__items {
+    position: fixed;
+    left: -50vw;
+    top: 0;
+    background-color: black;
+    width: 50vw;
+    height: 100vh;
+    transition: left 1s;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked ~ ul {
+    display: block;
+    left: 0;
+  }
+
+  &__input:checked ~ label::before {
+    content: '\2716';
+  }
+
+  &__label {
+    padding: 2rem;
+    background-color: black;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+  }
+  &__label::before {
+    content: '\2261';
+  }
+}
+
+/* HEADER */
+.header {
+  background-color: #13abc0;
+  color: white;
+  height: 45vh;
+  padding-left: 8vw;
+  &__title {
+    font-size: 5vw;
+    width: 50vw;
+    padding-top: 10vh;
+  }
+  &__subtitle {
+    color: grey;
+    font-size: 2.5vw;
+    padding-bottom: 5rem;
+  }
+  &__section {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  &__arrow {
+    padding-right: 4vw;
+  }
+}
+
+/* Robin */
+.robin {
+  background-color: black;
+  color: grey;
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  &__title {
+    width: 85vw;
+    font-size: 2rem;
+    padding-left: 5vw;
+  }
+  &__arrow {
+    width: 15vw;
+    background-color: pink;
+    color: white;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+}
+
+/* Aside */
+.aside {
+  display: flex;
+  flex-direction: column;
+  &__arrow {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(140, 0, 255);
+    color: white;
+    font-size: 4rem;
+  }
+}
+
+/* main */
+.main {
+  background-color: rgb(221, 221, 221);
+  padding: 3rem;
+
+  &__title {
+    color: blue;
+    font-size: 2rem;
+  }
+
+  &__text {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (width > 640px) {
+  .menu {
+    &__title {
+      display: none;
+    }
+
+    &__input {
+      display: none;
+    }
+
+    &__label {
+      display: none;
+    }
+
+    &__items {
+      position: inherit;
+      background: none;
+      height: 10vh;
+      display: flex;
+      width: 70vw;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.5rem;
+    }
+  }
+
+  .aside {
+    flex-direction: row;
+
+    &__arrow {
+      width: 33vw;
+      height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__img1 {
+      width: 33vw;
+      height: 45vh;
+    }
+    &__img2 {
+      width: 34vw;
+      height: 45vh;
+    }
+  }
+
+  .main {
+    &__texts {
+      display: flex;
+      gap: 5rem;
+    }
+  }
+}

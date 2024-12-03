@@ -1,0 +1,56 @@
+@import 'reset';
+@import 'color';
+@import 'base';
+
+.wrapper{
+  display: grid;
+  max-width: 60rem;
+  margin: auto;
+  gap: 1rem;
+  grid-template-areas: 
+            "menu header header aside"
+            "menu main main aside"
+            "menu main main aside"
+            "footer footer footer aside";
+}
+
+.wrapper > *{
+  border: 2px solid black;
+}
+
+.menu{
+  min-width: 7rem;
+  grid-area: menu;
+  & > ul > li > a{
+    color: black;
+  }
+}
+
+.header{
+  grid-area: header;
+}
+
+.main{
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "primo secundo";
+  gap: 1rem;
+}
+
+.primo{
+  border: 1px solid black;
+  grid-area: primo;
+}
+
+.secundo{
+  border: 1px solid black;
+  grid-area: secundo;
+}
+
+.aside{
+  grid-area: aside;
+}
+
+.footer{
+  grid-area: footer;
+}

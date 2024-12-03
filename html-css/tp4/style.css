@@ -1,0 +1,183 @@
+/* ALL */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+img {
+  max-width: 100%;
+}
+
+a,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  background-color: #e8e8e8;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* HEADER */
+header {
+  height: 10vh;
+  background-color: #67b0d6;
+  padding: 1vw 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: #f8f8f8;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 2rem;
+  flex: 1 1 0%;
+}
+
+header > ul {
+  display: flex;
+  font-size: 2rem;
+  gap: 2vw;
+}
+
+/* NEW COLLECTION*/
+.new-collection {
+  background-image: url('./img/index/new-collection.png');
+  background-position: top 0 left -16vw;
+  background-color: #f8f8f8;
+  background-size: cover;
+  height: 30vh;
+}
+
+.new-collection h2 {
+  margin-left: 52%;
+  color: #323c3f;
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding-top: 6vh;
+}
+
+.new-collection h3 {
+  margin-left: 52%;
+  color: #a6a6ad;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.new-collection .button {
+  text-align: right;
+}
+
+.new-collection .button a {
+  display: inline-block;
+  margin-top: 2vh;
+  padding: 1.5rem 1.5rem;
+  border-radius: 5px;
+  background-color: #f6846a;
+  color: #f8f8f8;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 15vw;
+}
+
+/* formulaire */
+form {
+  padding: 5vw;
+}
+input[type='text'] {
+  padding: 1.2rem 2rem 1.2rem 4rem;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  background-image: url('../img/searchicon.png');
+  background-position: 40px 10px;
+  background-repeat: no-repeat;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  text-indent: 7rem;
+  font-size: 2rem;
+}
+
+/* MAIN */
+main {
+  text-align: center;
+}
+
+main > h2 {
+  color: #323c3f;
+  font-size: 2.2rem;
+  padding: 2vh 0;
+  position: relative;
+}
+
+main > h2::before,
+main > h2::after {
+  display: block;
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 25%;
+  background-color: grey;
+  left: 40%;
+}
+
+main > h2::before {
+  bottom: 5vh;
+}
+
+main > h2::after {
+  top: 5vh;
+}
+
+.produits {
+  display: flex;
+  gap: 2.5vw;
+  flex-wrap: wrap;
+}
+
+.produits > article {
+  background-color: rgb(248, 248, 248);
+  flex: 1 1 40%;
+  margin: 2.5vw;
+}
+
+.produits > article > h2 {
+  color: #323c3f;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.produits > article > p {
+  color: #aaabbc;
+  font-size: 1.2rem;
+  line-height: 2;
+  padding-bottom: 2rem;
+}
+
+/* chargement */
+.chargement > i {
+  background-color: #67b0d6;
+  color: white;
+  font-size: 2.5rem;
+  padding: 5vw;
+  border-radius: 100%;
+  margin-bottom: 5vh;
+  margin-top: 2vh;
+}
+
+.allItems > a {
+  background-color: black;
+  color: white;
+  font-size: 1.8rem;
+  font-family: 'Noto Sans', sans-serif;
+  padding: 2vw 5vw;
+}

@@ -1,0 +1,28 @@
+                @media screen and (min-width:640px) {
+                    /* IMAGES */
+                    .images {
+                        display: flex;
+                        & p {
+                            flex: 1;
+                        }
+                        &__arrow {
+                            height: inherit;
+                        }
+                    }
+                    /* MAIN */
+                    .content {
+                        &__articles {
+                            display: flex;
+                            justify-content: space-between
+                        }
+                        &__article {
+                            width: 45%;
+                        }
+                    }
+                }
+                
+                @media screen and (min-width:980px) {
+                    .images__portrait {
+                        order: -1;
+                    }
+                }

@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Regles generales */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem; /* 14px par défaut */
+  /*font-family: 'Noto sans', sans-serif;*/
+}
+
+a, a:hover, a:visited { /* ATTENTION LES LIENS SONT BLANC DANS CE MODELE*/
+  color: #FFF;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.menu {
+  height: 10vh;
+  background-color: #373c3f;
+  color: white;
+  padding-left: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+.menu__items {
+  position: fixed;
+  left: -50vw;
+  top: 0;
+  background-color: black;
+  width: 50vw;
+  height: 100vh;
+  transition: left 1s;
+}
+.menu__input {
+  display: none;
+}
+.menu__input:checked ~ ul {
+  display: block;
+  left: 0;
+}
+.menu__input:checked ~ label::before {
+  content: "✖";
+}
+.menu__label {
+  padding: 2rem;
+  background-color: black;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.menu__label::before {
+  content: "≡";
+}
+
+/* HEADER */
+.header {
+  background-color: #13abc0;
+  color: white;
+  height: 45vh;
+  padding-left: 8vw;
+}
+.header__title {
+  font-size: 5vw;
+  width: 50vw;
+  padding-top: 10vh;
+}
+.header__subtitle {
+  color: grey;
+  font-size: 2.5vw;
+  padding-bottom: 5rem;
+}
+.header__section {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.header__arrow {
+  padding-right: 4vw;
+}
+
+/* Robin */
+.robin {
+  background-color: black;
+  color: grey;
+  display: flex;
+  height: 15vh;
+  align-items: center;
+}
+.robin__title {
+  width: 85vw;
+  font-size: 2rem;
+  padding-left: 5vw;
+}
+.robin__arrow {
+  width: 15vw;
+  background-color: pink;
+  color: white;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/* Aside */
+.aside {
+  display: flex;
+  flex-direction: column;
+}
+.aside__arrow {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(140, 0, 255);
+  color: white;
+  font-size: 4rem;
+}
+
+/* main */
+.main {
+  background-color: rgb(221, 221, 221);
+  padding: 3rem;
+}
+.main__title {
+  color: blue;
+  font-size: 2rem;
+}
+.main__text {
+  padding-top: 2rem;
+}
+
+@media screen and (width > 640px) {
+  .menu__title {
+    display: none;
+  }
+  .menu__input {
+    display: none;
+  }
+  .menu__label {
+    display: none;
+  }
+  .menu__items {
+    position: inherit;
+    background: none;
+    height: 10vh;
+    display: flex;
+    width: 70vw;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+  }
+  .aside {
+    flex-direction: row;
+  }
+  .aside__arrow {
+    width: 33vw;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aside__img1 {
+    width: 33vw;
+    height: 45vh;
+  }
+  .aside__img2 {
+    width: 34vw;
+    height: 45vh;
+  }
+  .main__texts {
+    display: flex;
+    gap: 5rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

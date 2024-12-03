@@ -1,0 +1,39 @@
+@import 'reset';
+@import 'base';
+@import 'mixins';
+
+.section {
+  width: 80vw;
+  height: 80vh;
+  background-repeat: no-repeat;
+}
+
+@media screen and (width < 544px) {
+  .section {
+    background-image: url('../doigt/1.jpg');
+  }
+}
+
+@media screen and (544px < width < 768px) {
+  .section {
+    background-image: url('../doigt/2.jpg');
+  }
+}
+
+@media screen and (768px < width < 992px) {
+  .section {
+    background-image: url('../doigt/3.jpg');
+  }
+}
+
+@media screen and (992px < width < 1200px) {
+  .section {
+    background-image: url('../doigt/4.jpg');
+  }
+}
+
+@media screen and (width > 1200px) {
+  .section {
+    background-image: url('../doigt/5.jpg');
+  }
+}

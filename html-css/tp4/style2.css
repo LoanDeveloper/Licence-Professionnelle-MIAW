@@ -1,0 +1,161 @@
+/* ALL */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+img {
+  max-width: 100%;
+}
+
+a,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  background-color: #e8e8e8;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* HEADER */
+header {
+  height: 10vh;
+  background-color: #67b0d6;
+  padding: 1vw 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: #f8f8f8;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 2rem;
+  flex: 1 1 0%;
+  font-weight: bold;
+}
+
+header > ul {
+  display: flex;
+  font-size: 2rem;
+  gap: 2vw;
+}
+
+header > i {
+  font-size: 1.8rem;
+}
+
+/* CATEGORIES */
+.categories {
+  display: flex;
+  justify-content: space-around;
+  background-color: #67b0d6;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.categories--all {
+  color: black;
+  border-bottom: 0.4rem solid;
+  padding-bottom: 2vh;
+}
+
+/* DISCOVER */
+.discover {
+  background-image: url('./img/advice/img2.png');
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+}
+
+.discover > h2 {
+  font-size: 1.8rem;
+  color: black;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-left: 6vw;
+}
+
+.discover > h3 {
+  font-size: 1.6rem;
+  color: grey;
+  font-weight: bold;
+  padding-left: 6vw;
+  padding-top: 1.5vh;
+}
+
+/* ultimate collection */
+.ultimate {
+  background-image: url('./img/advice/img1.png');
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  padding-bottom: 3vh;
+}
+
+/* formulaire */
+form {
+  padding: 5vw;
+}
+input[type='text'] {
+  padding: 1.2rem 2rem 1.2rem 4rem;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  background-image: url('../img/searchicon.png');
+  background-position: 40px 10px;
+  background-repeat: no-repeat;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  text-indent: 7rem;
+  font-size: 2rem;
+}
+
+/* PRODUCT */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.products figure {
+  flex: 1 1 40%;
+  padding: 1rem;
+  border-radius: 20%;
+}
+
+figure > figcaption {
+  background-color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 2rem 2rem;
+}
+
+/* chargement */
+.chargement > i {
+  background-color: #67b0d6;
+  color: white;
+  font-size: 2.5rem;
+  padding: 5vw;
+  margin-left: 40%;
+  border-radius: 100%;
+  margin-bottom: 5vh;
+  margin-top: 2vh;
+}

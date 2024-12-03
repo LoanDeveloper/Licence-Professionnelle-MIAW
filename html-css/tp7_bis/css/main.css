@@ -1,0 +1,512 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Regles generales */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  /* 14px par défaut */
+  /*font-family: 'Noto sans', sans-serif;*/
+}
+
+a,
+a:hover,
+a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  /*alignement correct des images*/
+}
+
+.opacity {
+  color: rgba(200, 200, 200, 0.5);
+}
+
+.header__top {
+  height: 5vh;
+}
+.header__content {
+  text-align: center;
+  padding: 1rem;
+  text-decoration: underline;
+  font-family: "Space Grotesk", sans-serif;
+}
+.header__accueil {
+  background-image: url("../img/bottier-background.png");
+  background-size: cover;
+  background-position: -30vw;
+  height: 70vh;
+  color: white;
+}
+.header__home {
+  padding-top: 4rem;
+}
+.header__title {
+  font-size: 7rem;
+  font-family: "Bebas Neue";
+  width: 90vw;
+  padding-left: 2rem;
+}
+.header__description {
+  font-family: "Space Grotesk", sans-serif;
+  width: 90vw;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  font-size: 2rem;
+}
+.header__decouvrir {
+  display: inline;
+  padding: 1.6rem 2.4rem;
+  border: 1px solid var(--white, #fff);
+  margin-bottom: 5rem !important;
+}
+.header__collection {
+  display: inline;
+  border: 1px solid var(--brown, #a49159);
+  background: var(--brown, #a49159);
+  padding: 1.6rem 2.4rem;
+}
+
+.menu__items {
+  position: fixed;
+  left: -100vw;
+  top: 5vh;
+  width: 100vw;
+  height: 70vh;
+  transition: left 1s;
+  background-color: black;
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu__item--title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.menu__logos {
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+}
+.menu__logo > img {
+  color: white;
+}
+.menu__input {
+  display: none;
+}
+.menu__label {
+  position: relative;
+  right: 0;
+  font-size: 5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  padding-right: 2rem;
+  z-index: 10;
+}
+.menu__input:checked ~ ul {
+  display: block;
+  left: 0;
+  display: flex;
+}
+.menu__input:checked ~ ul > li {
+  padding: 1.5rem;
+}
+.menu__input:checked ~ label::before {
+  content: "✖";
+}
+.menu__label::before {
+  content: "≡";
+}
+.menu__img {
+  width: 4rem;
+  padding-top: 20vh;
+  padding-right: 2rem;
+}
+
+.hiver {
+  border-bottom: solid grey;
+}
+.hiver__title {
+  font-family: "Bebas Neue";
+  font-size: 5rem;
+  width: 90vw;
+  padding: 2rem;
+}
+.hiver__decouvrir {
+  display: flex;
+  padding-left: 2rem;
+  align-items: center;
+}
+.hiver__arrow {
+  padding-right: 2rem;
+}
+.hiver__content {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.hiver__subtitle {
+  padding-left: 2rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+.hiver__items {
+  display: flex;
+  flex-direction: column;
+}
+.hiver__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #a49159;
+  margin: 2rem;
+  color: white;
+}
+.hiver__text {
+  font-family: "Bebas Neue";
+  font-size: 4.8rem;
+}
+.hiver__footer {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  padding-bottom: 2rem;
+}
+
+.savoir__title {
+  font-family: "Bebas Neue";
+  font-size: 5rem;
+  width: 90vw;
+  padding: 2rem;
+}
+.savoir__subtitle {
+  padding-left: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Space Grotesk", sans-serif;
+}
+.savoir__plus {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
+.savoir__arrow {
+  padding-right: 2rem;
+}
+.savoir__text {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.savoir__chiffre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.savoir__annees {
+  font-family: "Bebas Neue";
+  font-size: 9rem;
+  font-weight: bold;
+}
+.savoir__experience {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+.savoir__heures {
+  font-family: "Bebas Neue";
+  font-size: 9rem;
+  font-weight: bold;
+  padding-top: 2rem;
+}
+.savoir__montage {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.savoir :nth-child(4) {
+  border-bottom: solid;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  background-color: #a49159;
+}
+.description__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+}
+.description__img {
+  width: 50vw;
+}
+.description__title {
+  font-weight: bold;
+  padding: 1rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+.description__content {
+  width: 50vw;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.footer__bottom {
+  text-align: center;
+  font-size: 1.6rem;
+  border-top: solid grey;
+  padding: 1rem;
+}
+.footer__top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+.footer__top > ul {
+  width: 50vw;
+  padding: 2rem;
+}
+.footer__top > ul > li:nth-child(1) {
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+.footer__item {
+  padding: 0.5rem;
+}
+.footer__mail {
+  display: flex;
+  border-bottom: solid black;
+  width: -moz-max-content;
+  width: max-content;
+}
+.footer__arrow {
+  background-color: #a49159;
+  color: white;
+}
+.footer__input {
+  border: none;
+}
+
+@media screen and (width > 1224px) {
+  .header__accueil {
+    background-position: -15vw;
+  }
+  .header__home {
+    position: absolute;
+    top: 20vh;
+  }
+  .header__decouvrir {
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+  .menu__input {
+    display: none;
+  }
+  .menu__label {
+    display: none;
+  }
+  .menu__items {
+    position: inherit;
+    width: 20vw;
+    margin-left: 80vw;
+  }
+  .hiver__items {
+    flex-direction: row;
+  }
+  .hiver__item {
+    width: 30vw;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+  .hiver__footer {
+    width: 28vw;
+    padding-right: 5rem;
+  }
+  .hiver__decouvrir {
+    margin-left: 80vw;
+  }
+  .savoirs {
+    display: flex;
+    flex-direction: row;
+  }
+  .savoir {
+    width: 35vw;
+  }
+  .description {
+    flex-direction: row;
+    width: 65vw;
+  }
+  .description__item {
+    width: 20vw;
+  }
+  .description__content {
+    width: 20vw;
+    padding: 2rem;
+  }
+  .footer {
+    padding-top: 5rem;
+  }
+  .footer__top > ul {
+    width: 20vw;
+    padding: 2rem;
+  }
+  .footer__top {
+    padding-bottom: 2rem;
+  }
+}/*# sourceMappingURL=main.css.map */

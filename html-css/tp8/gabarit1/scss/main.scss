@@ -1,0 +1,54 @@
+@import 'reset';
+@import 'color';
+@import 'base';
+
+.wrapper{
+  display: grid;
+  max-width: 60rem;
+  margin: auto;
+  gap: 1rem;
+}
+
+.wrapper > *{
+  border: 2px solid black;
+}
+
+.menu{
+  min-width: 7rem;
+
+  grid-column: 1;
+  grid-row: span 2;
+  & > ul > li > a{
+    color: black;
+  }
+}
+
+.header{
+  grid-column: 2;
+}
+
+.main{
+  grid-column: 2;
+  display: grid;
+  gap: 1rem;
+}
+
+.primo{
+  grid-column: 1;
+  border: 1px solid black;
+}
+
+.secundo{
+  grid-column: 2;
+  border: 1px solid black;
+
+}
+
+.aside{
+  grid-column: 3;
+  grid-row: span 3;
+}
+
+.footer{
+  grid-column: span 2;
+}

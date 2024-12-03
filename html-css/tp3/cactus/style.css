@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #1d1363;
+}
+
+h1 {
+  font-family: 'Fira Sans', sans-serif;
+  color: #1d1363;
+  background-color: #3de073;
+  line-height: 10vh;
+  width: 100vw;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1 > span {
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 4vw;
+  text-transform: uppercase;
+}
+
+.creativite {
+  color: #3de073;
+}
+
+.retourligne {
+  display: block;
+}
+
+p {
+  color: #3de073;
+  margin-bottom: 2rem;
+  font-size: 5vh;
+}

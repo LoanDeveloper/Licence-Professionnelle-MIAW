@@ -1,0 +1,90 @@
+.menu {
+        &__items {
+          position: fixed;
+          left: -100vw;
+          width: 100vw;
+          height: 80vh;
+          top: 0;
+          transition: left 1s;
+          background-color: $vertClair;
+          color: $complementaire1Rouge;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        &__item {
+        }
+        &__link{
+                @include poppins_regular($complementaire1Rouge, 1.5rem);
+        }
+        &__logos {
+          display: flex;
+          flex-direction: row;
+          z-index: 10;
+        }
+        &__logo{
+                width: 30vw;
+        }
+        &__input {
+          display: none;
+        }
+      
+        &__label {
+          position: absolute;
+          top: 2rem;
+          left: 2rem;
+          right: 0;
+          font-size: 5rem;
+          font-weight: bold;
+          display: flex;
+          justify-content: end;
+          padding-right: 2rem;
+          z-index: 10;
+          color: $vertClair;
+        }
+      
+        &__input:checked ~ ul {
+          display: block;
+          left: 0;
+          display: flex;
+        }
+      
+        &__input:checked ~ ul > li {
+          padding: 1.5rem;
+        }
+      
+        &__input:checked ~ label::before {
+          content: '\2716';
+          color: $complementaire1Rouge
+
+        }
+      
+        &__label::before {
+          content: '\2261';
+        }
+        &__img {
+          width: 4rem;
+          padding-top: 20vh;
+          padding-right: 2rem;
+        }
+}
+      
+@media screen and (min-width:640px) {
+        .menu {
+                &__input {
+                  display: none;
+                }
+            
+                &__label {
+                  display: none;
+                }
+            
+                &__items {
+                  position: inherit;
+                  width: 5vw;
+                  margin-left: 95vw;
+                }
+              }
+}

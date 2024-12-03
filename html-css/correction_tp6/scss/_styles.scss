@@ -1,0 +1,102 @@
+.banner {
+    background: $fond;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    &__title {
+        color: $ecriturePrincipal;
+        font-size: 5.5vw;
+        width: 70vw;
+        text-align: justify;
+        & span {
+            display: block;
+        }
+    }
+    &__info {
+        padding-top: 2rem;
+        font-size: 3vw;
+        width: 67vw;
+        display: flex;
+        justify-content: space-between;
+        & i {
+            color: $ecriturePrincipal;
+        }
+    }
+}
+
+
+/*********************/
+
+
+/* section LIKE:    */
+
+
+/*******************/
+
+.like {
+    background: $fondMenu;
+    height: 15vw;
+    /*carre*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3vw;
+    &__arrow {
+        width: 15vw;
+        /*carre*/
+        background: $fleche1;
+        color: $ecriturePrincipal;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__titre {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+
+/*************************/
+
+
+/*   aside IMAGE        */
+
+
+/***********************/
+
+.images__arrow {
+    background-color: $fleche2;
+    color: $ecriturePrincipal;
+    font-size: 7vw;
+    height: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/********************/
+
+
+/* main              */
+
+
+/********************/
+
+.content {
+    background: #ebebeb;
+    padding: 4rem;
+    &__title {
+        font-size: 3rem;
+        color: $contentTitle;
+        margin-bottom: 2rem;
+    }
+    &__p {
+        margin-bottom: 2rem;
+        line-height: 1.8;
+    }
+}

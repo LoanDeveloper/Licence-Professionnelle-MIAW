@@ -1,0 +1,90 @@
+/* ALL */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  gap: 5rem;
+}
+
+section {
+  font-size: 1.6rem;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+  width: 30vw;
+}
+
+img {
+  max-width: 100%;
+  height: 100vh;
+}
+
+/* FIGURE */
+figure {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+}
+
+figcaption {
+  z-index: 1;
+  background-color: rgba(250, 250, 250, 0.7);
+  padding: 2rem;
+  position: absolute;
+  top: 60vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  height: 20vh;
+  width: 25vw;
+}
+
+figcaption > ul {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+figcaption > ul > li {
+  display: flex;
+  flex-direction: row;
+  padding: 0.4rem;
+}
+
+figcaption > ul > li > p > i {
+  padding-right: 1rem;
+}
+
+.image1 {
+  position: absolute;
+}
+
+.image2 {
+  height: max-content;
+  width: 10rem;
+  z-index: 2;
+  border-radius: 100%;
+  position: relative;
+  top: 52vh;
+  left: 8vw;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 2vh;
+}

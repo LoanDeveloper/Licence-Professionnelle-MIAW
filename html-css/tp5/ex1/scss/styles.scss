@@ -1,0 +1,75 @@
+@import 'reset';
+@import 'base';
+@import 'mixins';
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+
+.card {
+  @include ombre;
+  width: 40vw;
+
+  &-right {
+    .card__article {
+      text-align: right;
+
+      &--titles {
+        border-left: none;
+        border-right: solid 4px #ff9500;
+        padding-right: 1rem;
+      }
+    }
+
+    .card__footer--author {
+      text-align: right;
+    }
+  }
+
+  &-big {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85vw;
+
+    .card__article {
+      border-bottom: none;
+    }
+    .card__footer {
+      width: 100%;
+      border-top: solid 2px grey;
+      text-align: center;
+    }
+  }
+  &:hover {
+    @include survol(-5px);
+  }
+
+  &__article {
+    padding: 2rem;
+    border-bottom: solid 2px grey;
+
+    &--titles {
+      border-left: solid 4px #ff9500;
+      padding-left: 1rem;
+    }
+
+    &--title {
+      font-size: 2rem;
+      font-weight: bold;
+      padding-bottom: 0.5rem;
+    }
+
+    &--description {
+      padding-top: 1rem;
+    }
+  }
+
+  &__footer {
+    &--author {
+      padding: 2rem;
+    }
+  }
+}

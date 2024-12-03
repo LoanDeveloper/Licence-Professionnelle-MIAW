@@ -1,0 +1,177 @@
+@import 'reset';
+@import 'base';
+@import 'mixins';
+@import url('https://fonts.cdnfonts.com/css/graphik-trial');
+
+body {
+  background-color: #19191b;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  font-weight: bold;
+  &__logo {
+    display: flex;
+    color: white;
+    align-items: center;
+    &--title {
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+.buildPlatform {
+  color: white;
+  &__title {
+    width: 80vw;
+    padding: 2rem;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 6rem;
+    font-family: 'Graphik Trial', sans-serif;
+  }
+  &__description {
+    color: grey;
+    padding: 0rem 2rem;
+    margin-bottom: 5rem;
+  }
+  &__services {
+    background-color: #5454d4;
+    display: inline;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    &--link {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.bestChoice {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    @include title_h2;
+  }
+  &__description {
+    color: grey;
+    padding: 0rem 2rem;
+    margin-bottom: 5rem;
+  }
+  &__img {
+    padding: 0rem 2rem;
+  }
+}
+
+.service {
+  color: white;
+  &--development {
+    background-color: rgb(84, 84, 212, 0.1);
+  }
+  &--designer {
+    background-color: rgb(199, 0, 57, 0.1);
+  }
+  &--graphik {
+    background-color: rgb(255, 195, 0, 0.1);
+  }
+  &--camera {
+    background-color: rgb(84, 84, 212, 0.1);
+  }
+  &--videography {
+    background-color: rgb(199, 0, 57, 0.1);
+  }
+  &__title {
+    @include title_h2;
+    margin-top: 5rem;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__item {
+    text-align: center;
+    &--title {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 2rem;
+    }
+    &--description {
+      color: grey;
+      padding: 2rem;
+      margin-bottom: 5rem;
+      padding: 2rem 5rem;
+    }
+    &--img {
+      padding: 1rem;
+      border-radius: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    @include title_h2;
+  }
+  &__img {
+    padding: 2rem;
+  }
+  &__slider {
+    width: 8rem;
+    align-self: center;
+    margin-bottom: 5rem;
+  }
+}
+
+.contact {
+  color: white;
+  &__title {
+    @include title_h2;
+    margin-bottom: 2rem;
+  }
+  &__button {
+    background-color: #5454d4;
+    display: inline;
+    padding: 1rem 2.5rem;
+    margin: 2rem;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 5px;
+  }
+}
+
+.footer {
+  color: rgb(255, 255, 255, 0.7);
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    &--title {
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.4rem;
+      padding-left: 0.5rem;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__item {
+    padding: 1.5rem;
+    &--a {
+      color: rgb(255, 255, 255, 0.7);
+      font-family: 'Nunito Sans', sans-serif;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    padding: 2rem;
+  }
+}

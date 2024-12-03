@@ -1,0 +1,124 @@
+/*    ALL    */
+
+.retourLigne{
+  display: block;
+}
+
+/*    HEADER    */
+
+.header{
+  background-image: url("../img/header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vh;
+  text-align: center;
+  &__logo{
+    width: 25vw;
+  }
+  &__titles{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+  }
+  &__title{
+    @include bebas_neue($vertFonce, 3rem);
+    font-weight: bold;
+  }
+  &__subtitle{
+    @include poppins_regular($vertPlusClair, 1.5rem);
+    width: 70vw;
+  }
+  &__link{
+    @include button;
+    width: fit-content;
+    align-self: center;
+  }
+
+}
+
+
+/*        MAIN        */
+
+
+/*        INTRO       */
+
+.intro{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  &__title{
+    @include bebas_neue($vertFonce, 2rem);
+    line-height: 2.5rem;
+  }
+  &__description{
+    @include poppins_regular($noir, 1.2rem);
+    line-height: 2rem;
+    justify-self:end;
+  }
+  &__link{
+    @include button();
+    width: fit-content;
+  }
+  &__img{
+    width: 100vw;
+  }
+}
+
+/*        DOMAINES       */
+
+.domaines{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  &__title{
+    @include h3(1.8rem);
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.domaine{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  &__title{
+    @include h4;
+  }
+  &__subtitle{
+    color: $complementaire1Rouge; //pas le temps pour faire les mixins
+    font-family: "Poppins", sans-serif; 
+  }
+  &__description{
+    font-family: "Poppins", sans-serif; //pas le temps pour faire les mixins
+    line-height: 2rem;
+  }
+
+}
+
+/*        PRODUITS       */
+.produits{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__title{
+    @include h3;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
